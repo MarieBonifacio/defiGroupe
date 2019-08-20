@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 521px) {
+  #SlidePromo {
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+  }
+  #imgSliderPromo {
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+#SlidePromo {
+  width: 100%;
+  height: 30vh;
+  /* margin-top: 5vh; */
+}
+#imgSliderPromo {
+  width: 100%;
+  height: 40vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-position: center;
+ 
+}
+
+#test{
+  height: 0;
+  width: 0;
+  border-bottom:40vh solid white;
+  border-left: 200px solid white;
+  border-right: 400px solid transparent;
+  position: absolute;
+ opacity: 0.8;
+  
+}
