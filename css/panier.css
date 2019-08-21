@@ -1,7 +1,3 @@
-:root{
-    --primary-orange: orange;
-}
-
 #panier{
     width: 35px;
     height: 35px;
@@ -14,43 +10,27 @@
     background-color: var(--primary-orange);
     position: fixed;
     top: 50px;
-    right: 50px;
+    right: 10px;
     cursor: pointer;
     opacity: .5;
-}
-
-#panier.active{
-    width: 150px;
-    border-radius: 0px 15px 0px 0px;
-    opacity: 1;
-    transition: all .4s;
-    align-items: flex-end;
-    justify-content: flex-start;
-    box-shadow: 0px 0px 4px 2px #7a7a7a98;
-}
-
-#panier.active .panierNbItem{
-    display: none;
-}
-
-#panier.active #items{
-    opacity: 1;
-    transition: all 0s;
-    display: block;
 }
 
 #panier #items{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 80%;
     text-align: left;
     display: none;
-    opacity: 0;
-    transition: all 0s;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 75%;
+    padding: 20px;
+    position: relative;
 }
 
 #panier #items li{
+    height: 40px;
     margin-top: 5px;
     border-width: 0px 0px 1px 0px;
     border-style: dotted;
@@ -58,6 +38,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: Roboto;
+    color: white;
+}
+
+#panier #items li:last-child{
+    border-width: 1px 0px 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
 }
 
 #panier:hover{
@@ -81,4 +70,89 @@
     font-weight: bold;
     font-family: Roboto;
     font-size: 14px;
+}
+
+#panier .toCommand{
+    display: none;
+    box-shadow: 0px 0px 7px 1px #000000;
+    border-radius:28px;
+    cursor:pointer;
+    color:#000000;
+    font-family:Impact;
+    font-size:18px;
+    font-weight:bold;
+    padding:14px 28px;
+    text-decoration:none;
+    background-color: var(--primary-orange);
+    border:2px solid #ffffff;
+    margin-top: 20px;
+    font-family: Raleway;
+}
+
+#panier .toCommand:hover {
+    background-color:#ffffff;
+}
+
+#panier .toCommand:active {
+    position:relative;
+    top:1px;
+}
+
+#panier .flex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#panier .title{
+    display: none;
+}
+
+/* PANIER ACTIVE*/
+#panier.active{
+    border-radius: 0px 0px 0px 0px;
+    width: 96vw;
+    height: 98vh;
+    opacity: 1;
+    top: 0px;
+    right: 0px;
+    padding: 2vw;
+    transition: all .4s;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#panier.active .panierNbItem{
+    display: none;
+}
+
+#panier.active #items{
+    transition: all 0s;
+    display: block;
+}
+
+#panier.active .icon{
+    align-self: center;
+    margin-left: 10px;
+}
+
+#panier.active .toCommand{
+    display: block;
+}
+
+#panier.active .title{
+    display: block;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 800px) {
+    #panier.active{
+        width: 40vw;
+        opacity: .9;
+    }
+    #panier #items{
+        height: 70%;
+    }
 }
