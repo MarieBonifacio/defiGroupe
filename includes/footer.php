@@ -31,9 +31,9 @@
             </ul>
         </div>
         <div class="reseaux">
-            <img src="../images/facebook.svg">
-            <img src="../images/instagram.svg">
-            <img src="../images/twitter.svg">
+            <img src="./images/facebook.svg">
+            <img src="./images/instagram.svg">
+            <img src="./images/twitter.svg">
         </div>
     </footer>
 </body>
