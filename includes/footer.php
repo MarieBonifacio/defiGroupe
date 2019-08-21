@@ -15,7 +15,7 @@
             <ul>
 
                 <?php
-                    require('./dbconnect.php');
+                    require('./includes/dbconnect.php');
                     $sql= "SELECT * FROM categories ORDER BY ordre";
                     $select= $dbh->query($sql);
                     while($row=$select->fetch()){
