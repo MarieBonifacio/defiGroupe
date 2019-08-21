@@ -37,4 +37,12 @@
         </div>
     </footer>
 </body>
+<script src="./js/panier.js" charset="utf-8"></script>
+<?php
+if(!empty($js)){
+    foreach($js as $value){
+        echo '<script src="./js/'.$value.'.js" charset="utf-8"></script>';
+    }
+}
+?>
 </html>
