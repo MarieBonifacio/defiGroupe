@@ -38,6 +38,8 @@
     </footer>
 </body>
 <script src="./js/panier.js" charset="utf-8"></script>
+<script src="./js/menu.js" charset="utf-8"></script>
+
 <?php
 if(!empty($js)){
     foreach($js as $value){
