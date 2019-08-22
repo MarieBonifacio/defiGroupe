@@ -9,20 +9,24 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 200px) and (max-width: 521px) {
+@media screen  and (max-width: 800px) {
   #SlidePromo {
     width: 100%;
-    height: 30vh;
-    background-color: black;
+    height: 25vh !important;
+    
   }
   #imgSliderPromo {
     width: 100%;
-    height: 40vh;
+    height: 25vh!important;
     background-size: contain;
     background-repeat: no-repeat;
     background-blend-mode: lighten;
     background-attachment: fixed;
     background-position: center;
+  }
+  #test {
+    display: none;
+   
   }
 }
 
@@ -39,16 +43,15 @@ body {
   background-blend-mode: lighten;
   background-attachment: fixed;
   background-position: center;
- 
 }
 
-#test{
+#test {
+  position: absolute;
   height: 0;
   width: 0;
-  border-bottom:40vh solid white;
-  border-left: 200px solid white;
-  border-right: 400px solid transparent;
-  position: absolute;
- opacity: 0.8;
-  
+  border-bottom: 40vh solid white;
+  border-left: 15vmax solid white;
+  border-right: 30vmax solid transparent;
+
+  opacity: 0.8;
 }

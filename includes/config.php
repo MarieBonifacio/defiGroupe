@@ -1,7 +1,7 @@
 <?php
 
 //Menu navigation
-$nav = ["acceuil" , "categories" , "compte"];
+$nav = ["accueil" , "categories" , "compte"];
 
 
 //Base de données
