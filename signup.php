@@ -6,6 +6,15 @@ require("./includes/header.php");
 <div id="signup" class="formulaire">
     <h1>Inscription</h1>
     <form method="post" action="./controller/signup.php">
+        <div class="msgError">
+            <?php
+                if(!empty($_SESSION['error'])){
+                    echo $_SESSION['error'];
+                    unset($_SESSION['error']);
+                }
+                
+            ?>
+        </div>
         <div class="part">
             <div class="field">
                 <label for="mail">Mail :</label>
@@ -47,8 +56,8 @@ require("./includes/header.php");
                 <input type="password" id="pass" name="password" required>
             </div>
             <div  class="field">
-                <label for="pass">Confirmation du mot de Passe :</label>
-                <input type="password" id="pass" name="password2" required>
+                <label for="pass2">Confirmation du mot de Passe :</label>
+                <input type="password" id="pass2" name="password2" required>
             </div>
             <div class="button">
                 
@@ -56,16 +65,8 @@ require("./includes/header.php");
         </div>
         <div class="part"><button type="submit" id="button">Envoyer</button></div>
     </form>
-    <div>
 </div>
-        <?php
-            if(!empty($_SESSION['error'])){
-                echo $_SESSION['error'];
-                unset($_SESSION['error']);
-            }
-            
-        ?>
-    </div>
+
 <?php 
 require("./includes/footer.php");
 ?>
