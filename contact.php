@@ -6,6 +6,14 @@ require('./includes/header.php');
 <div id="contact" class="formulaire">
     <h1>Contact</h1>
     <form method="post" action="./controller/contact.php">
+        <div class="msgError">
+            <?php
+            if (isset($_SESSION['error'])){
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+            }
+            ?>
+        </div>
         <div class="part">
             <div class="field">
                 <label for="nom">Nom :</label>
