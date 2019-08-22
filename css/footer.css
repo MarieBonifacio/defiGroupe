@@ -1,0 +1,138 @@
+#footer ul,
+ol{
+    list-style-type: none;
+}
+#footer a{
+    text-decoration: none;
+}
+
+#footer{
+    width: 100%;
+    height: 300px;
+    bottom : 0;
+    background-color: white;
+    border : none;
+    display: flex;
+    flex-direction: column; 
+    
+}
+#footer i{
+    position: relative;
+    top: 4px;
+    color: var(--primary-orange);
+}
+
+#footer .mailinglist{
+    width:99%;
+    height: 120px;
+    border: none;
+    border-top: 2px solid grey;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+}
+
+#footer .inputmailinglist{
+    height:100%;
+    border: none;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+#footer .buttonmail{
+    height: 100%;
+    border:none;
+    background-color: rgba(204, 204, 204, 0.6);
+}
+
+#footer .buttonmail i{
+    top:0;
+}
+
+#footer .buttonmail:hover {
+    background-color:#ffffff;
+}
+#footer .buttonmail:active {
+    position:relative;
+    top:1px;
+} 
+
+#footer .formmailinglist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    box-shadow: 0px 0px 4px 2px #7a7a7a98;
+}
+
+#footer #abo{
+    align:center;
+} 
+
+#footer .menufooter{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-top: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#footer .navig{
+    width: 100%;
+    height: 60px;
+    border:none;
+    border-bottom: 2px solid grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#footer a:visited, #footer a{
+    color:black;
+}
+
+#footer .reseaux{
+    width: 99%;
+    height: 60px;
+    border: none;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer .res{
+    width:10px;
+    height: 10px;
+}
+
+#footer a:after {
+	content: '';
+    position: absolute;
+    display: inline-block;
+    height: 1em;
+    left:38%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-bottom: 1px solid;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+#footer a:hover:after {
+    opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
