@@ -5,12 +5,12 @@ $nav = ["acceuil" , "categories" , "compte"];
 
 
 //Base de données
-$dbhost = "localhost";
+$dbhost = "webserv-db";
 $dbname = "lunettes";
 
 //Utilisateur
-$dbuser = "vianney";
-$dbpass = "Majin59.";
+$dbuser = "simplon";
+$dbpass = "simplon";
 
 //Inscription / Compte
 
