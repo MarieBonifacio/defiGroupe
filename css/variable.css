@@ -1,0 +1,16 @@
+/* variables css */
+
+:root{
+    /* colors */
+    --primary-orange: rgba(255,112,67 ,1);
+    --primary-black: rgba(0,0,0,1);
+    --primary-white: rgba(255,255,255,1);
+
+    /* fonts de google-fonts*/
+    --Roboto:  'Roboto', sans-serif;
+    --Raleway: 'Raleway', sans-serif;
+
+    --size-font: 1rem;
+    
+
+}

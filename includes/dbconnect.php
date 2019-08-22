@@ -1,6 +1,6 @@
 
 <?php
-require ("config.php");
+require('./includes/config.php');
 
 try {
     $dbh = new PDO('mysql:host='.$dbhost.';dbname='.$dbname, $dbuser, $dbpass);

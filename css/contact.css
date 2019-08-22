@@ -1,0 +1,7 @@
+#contact .part{
+    flex: 0 0 100%;
+}
+
+#contact textarea{
+    height: 150px;
+}

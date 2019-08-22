@@ -1,4 +1,5 @@
 <?php
+
 //Menu navigation
 $nav = ["acceuil" , "categories" , "compte"];
 
@@ -16,3 +17,4 @@ $dbpass = "Majin59.";
 
 
 ?>
+
