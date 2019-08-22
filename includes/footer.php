@@ -1,6 +1,6 @@
     </div>
     <footer id="footer">
-        
+
         <div class="mailinglist">
                 <span id="abo"><i class="material-icons">email</i>
                 Abonnez-vous !<br></span>
