@@ -1,6 +1,20 @@
 <?php
+
+//Menu navigation
+$nav = ["acceuil" , "categories" , "compte"];
+
+
+//Base de données
 $dbhost = "localhost";
 $dbname = "lunettes";
-$dbuser = "simplon";
-$dbpass = "simplon";
+
+//Utilisateur
+$dbuser = "vianney";
+$dbpass = "Majin59.";
+
+//Inscription / Compte
+
+
+
 ?>
+
