@@ -100,29 +100,38 @@
     width:10vh;
     text-align: center;
     /* transition:.1s; */
+    margin-left:3vh;
 
 }
 .opensearchdisappear{
-    visibility: hidden;
+    display: none;
     position: absolute;
 }
 .searchbar{
-    transition:.7s;
-    opacity: 0;
-    display: flex;
+    /* transition:.7s; */
+    /* display: flex; */
+    /* visibility: hidden; */
+    display: none;
     align-content: center;
+    
+    
 }
 .searchbaractive{
-    opacity:1;
+    /* visibility: visible; */
+    display: flex;
+    margin-left:2vh;
 }
 .closesearch{
     width:10vh;
     /* transition:.2; */
     visibility: hidden;
+    position: absolute;
     
 }
 .appearclosesearch{
     visibility: visible;
+    position: relative;
+    margin-left:3vh;
 }
 }
 
