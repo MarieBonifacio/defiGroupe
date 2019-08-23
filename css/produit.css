@@ -1,0 +1,112 @@
+#produit {
+  position: relative;
+  height: 80vh;
+  background-color: var(--primary-white);
+}
+#produit .name {
+  text-align: center;
+  font-size: 17px;
+  color: red;
+  padding-top: 20px;
+}
+#produit .Img {
+  margin-top: 20px;
+  height: 30vh;
+  background-color: rgb(255, 255, 255);
+}
+#produit .Img img {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 10%;
+  width: 80%;
+  /* height: 40vh; */
+}
+#produit .flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+
+#produit .color-red {
+  font-size: 17px;
+  color: red;
+}
+#produit .color-green {
+  color: rgb(1, 69, 255);
+  font-size: 17px;
+}
+#produit .Price {
+  color: var(--primary-orange);
+  font-size: 21px;
+}
+#produit .ajouPanier {
+  border: none;
+  height: 5vh;
+  width: 150px;
+  margin-top: 10px;
+  -moz-box-shadow: 0px 0px 7px 1px #000000;
+  -webkit-box-shadow: 0px 0px 7px 1px #000000;
+  box-shadow: 0px 0px 7px 1px #000000;
+  background-color: var(--primary-orange);
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #000000;
+  font-family: Impact;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 14px;
+  text-decoration: none;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#produit .ajouPanier:hover {
+  background-color: #ffffff;
+  color: var(--primary-orange);
+}
+#produit .ajouPanier:active{
+  transform: scale(1.7);
+}
+#produit .description {
+  text-align: center;
+  color: var(--primary-black);
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 5vh;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  #produit {
+    height: 70vh;
+  }
+  #produit .name {
+    margin-top: 100px;
+  }
+  #produit .Img img {
+    margin-top: 40px;
+    left: 33%;
+    height: 30vh;
+    width: 33%;
+  }
+  #produit .ajouPanier {
+    right: 40vh;
+  }
+  #produit .color-red {
+    font-size: 24px;
+  }
+  #produit .color-green {
+    font-size: 24px;
+  }
+  #produit .Price {
+    font-size: 24px;
+    color: black;
+  }
+}

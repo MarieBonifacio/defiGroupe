@@ -8,7 +8,7 @@ class Category{
     public function __construct(){}
 
     public function getCategoryById($id){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         $sql = "SELECT * FROM categories WHERE id=:id";
         $select = $dbh->prepare($sql);
         $select->bindParam(':id', $id);
@@ -25,7 +25,7 @@ class Category{
     }
 
     public function getCategoryByName($nom){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         $sql = "SELECT * FROM categories WHERE nom=:nom";
         $select = $dbh->prepare($sql);
         $select->bindParam(':nom', $nom);
@@ -66,7 +66,7 @@ class Category{
     }
 
     public function save(){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         if(!$this->nomExist()){
             $sql = "INSERT INTO categories(nom, ordre) VALUES(:nom, :ordre)";
             $insert = $dbh->prepare($sql);
@@ -82,7 +82,7 @@ class Category{
     }
 
     public function update(){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         if($this->id != ""){
             $sql = "UPDATE categories SET nom=:nom, ordre=:ordre WHERE id=:id";
             $update = $dbh->prepare($sql);
@@ -96,7 +96,7 @@ class Category{
 
     public function delete(){
         if($this->id != ""){
-            require('../includes/dbconnect.php');
+            require(dirname(__DIR__).'/includes/dbconnect.php');
             $sql = "DELETE FROM categories WHERE id=:id";
             $delete = $dbh->prepare($sql);
             $delete->bindParam(':id', $this->id);
@@ -106,7 +106,7 @@ class Category{
     }
 
     private function nomExist(){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         $sql = "SELECT id FROM categories WHERE nom=:nom";
         $select = $dbh->prepare($sql);
         $select->bindParam(':nom', $this->nom);
