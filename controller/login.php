@@ -41,9 +41,11 @@ if(!empty($_POST['mail']) AND !empty($_POST['password'])){
             header("Location: ../profil.php");
         }else{
             header("Location:../login.php");
+            $_SESSION['error']="Mot de passe incorrect";
         }
     }else{
         header("Location:../login.php");
+        $_SESSION['error']="Compte inexistant";
     }
 }else{
     header("Location:../login.php");
