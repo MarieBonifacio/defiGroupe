@@ -11,7 +11,7 @@ class Produit{
     public function __construct(){}
 
     public function getProduitById($id){
-        require('../includes/dbconnect.php');
+        require(dirname(__DIR__).'/includes/dbconnect.php');
         $sql = "SELECT * FROM produits WHERE id=:id";
         $select = $dbh->prepare($sql);
         $select->bindParam(':id', $id);
@@ -82,7 +82,7 @@ class Produit{
 
     public function save(){
         if($this->id == ""){
-            require('../includes/dbconnect.php');
+            require(dirname(__DIR__).'/includes/dbconnect.php');
             $sql = "INSERT INTO produits(nom, description, prix, stock, category_id) VALUES(:nom, :description, :prix, :stock, :category_id)";
             $insert = $dbh->prepare($sql);
             $insert->bindParam(':nom', $this->nom);
@@ -101,7 +101,7 @@ class Produit{
 
     public function update(){
         if($this->id != ""){
-            $require('../includes/dbconnect.php');
+            $require(dirname(__DIR__).'/includes/dbconnect.php');
             $sql = "UPDATE produits SET nom=:nom, description=:description, prix=:prix, stock=:stock, category_:category_id";
             $update = $dbh->prepare($sql);
             $update->bindParam(':nom', $this->nom);
