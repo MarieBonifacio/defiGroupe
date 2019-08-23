@@ -34,6 +34,7 @@ if(isset($_POST['delete'])){
         //attribue la variable session id à la variable sql id
         $update->bindParam(":id", $_SESSION["userLog"]["id"]);
         $update->execute();
+        $_SESSION["userLog"]["email"]=$mail;
     }
 //maj adresse
     if(!empty($_POST['adresse'])){
@@ -45,6 +46,7 @@ if(isset($_POST['delete'])){
         //attribue la variable session id à la variable sql id
         $update->bindParam(":id", $_SESSION["userLog"]["id"]);
         $update->execute();
+        $_SESSION["userLog"]["adresse"]=$add;
     }
 // maj CP
     if(!empty($_POST['cp'])){
@@ -56,6 +58,7 @@ if(isset($_POST['delete'])){
         //attribue la variable session id à la variable sql id
         $update->bindParam(":id", $_SESSION["userLog"]["id"]);
         $update->execute();
+        $_SESSION["userLog"]["cp"]=$cp;
     }
 //maj tel
     if(!empty($_POST['tel'])){
@@ -67,6 +70,7 @@ if(isset($_POST['delete'])){
         //attribue la variable session id à la variable sql id
         $update->bindParam(":id", $_SESSION["userLog"]["id"]);
         $update->execute();
+        $_SESSION["userLog"]["tel"]=$tel;
     }
 
     if(!empty($_POST['mdp'])AND !empty($_POST['mdp2'])){
