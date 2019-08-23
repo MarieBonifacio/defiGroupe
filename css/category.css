@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+}
+
+#produits{
+    position: fixed;
+}
+
+
+#produits input{
+    color: black;
+    font-size: 2.5vh;
+    margin-left:2vw;
+}
+
+#produits li{
+    list-style: none;
+    margin-left:5vw;
+    line-height: 3.5vh;  
+}
+
+/* #produits .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+} */
+
+/* #produits .filtre{
+    width:100vw;
+    position: fixed;
+} */
+
+#produits .submit{
+    grid-column: 4/5;
+    grid-row:1/2; 
+}
+
+#produits .choixFormes{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+
+#produits .formes{
+    grid-column :2/3;
+    grid-row: 2/3;
+    
+}
+
+#produits .choixMatieres{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#produits .matieres{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#produits button{
+    margin-right:1vw;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border:none;
+    font-size:3vh;
+    transition: .8s;
+    width:26vw;
+    height: 35px;
+    font-size: 3vh;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    transition: .5s all;
+}
+
+#produits button:hover{
+    /* margin-right: 10px; */
+    left: 2px;
+    /* background-color: black; */
+    color: orange;
+    border:none;
+    font-size:3vh;
+}
+
+#produits .button{
+    /* width:100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 35px 1fr;
+
+}
+
+#produits .couleurs, .formes, .matieres{
+    display: none;
+    margin-right:2vh;
+}
+
+#produits .couleursappear, .formesappear, .matieresappear{
+    display: inline;
+}
+
