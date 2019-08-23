@@ -5,9 +5,11 @@ $panierCookies = array(
     array("nom" => "Item 3", "quantite" => 3, "prix" => 12.50 ),
 );
 setcookie("panier", serialize($panierCookies), time()+2*24*60*60);
+$_SESSION['panier']=$panierCookies;
 
-if(isset($_COOKIE["panier"])){
-    $panier = unserialize($_COOKIE["panier"]);
+
+if(isset($_SESSION["panier"])){
+    $panier = $_SESSION["panier"];
 } else{
     $panier = array();
 }
