@@ -1,19 +1,19 @@
-var edits = document.querySelectorAll(".edit");
-var deletes = document.querySelectorAll(".delete");
+var editsPrd = document.querySelectorAll(".editsPrd");
+var deletesPrd = document.querySelectorAll(".deletesPrd");
 
-edits.forEach(function(edit){
+editsPrd.forEach(function(edit){
     edit.addEventListener('click', function(){
-        editCategory(this.getAttribute('rel'));
+        editProduit(this.getAttribute('rel'));
     });
 });
 
-deletes.forEach(function(del){
+deletesPrd.forEach(function(del){
     del.addEventListener('click', function(){
-        deleteCategory(this.getAttribute('rel'));
+        deleteProduit(this.getAttribute('rel'));
     });
 });
 
-function editCategory(id){
+function editProduit(id){
     var popEditBack = document.createElement('div');
     var pop = document.createElement('div');
     var form = document.createElement('form');
@@ -58,7 +58,7 @@ function editCategory(id){
     popEditBack.addEventListener('click',removePop, 0);
 }
 
-function deleteCategory(id){
+function deleteProduit(id){
     var popEditBack = document.createElement('div');
     var pop = document.createElement('div');
     var form = document.createElement('form');
@@ -90,7 +90,6 @@ function deleteCategory(id){
 
     popEditBack.addEventListener('click',removePop, 0);
 }
-
 
 function removePop(e){
     if(e.target.id == "popEditBack"){

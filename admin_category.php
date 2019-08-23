@@ -61,8 +61,8 @@ require('./includes/header.php');
                     '.$row['ordre'].'
                 </div>
                 <div class="category_action">
-                    <i class="material-icons edit" rel="'.$row['id'].'">edit</i>
-                    <i class="material-icons delete" rel="'.$row['id'].'">delete</i>
+                    <i class="material-icons editCat" rel="'.$row['id'].'">edit</i>
+                    <i class="material-icons deleteCat" rel="'.$row['id'].'">delete</i>
                 </div>
             </div>
             ';
