@@ -9,8 +9,8 @@ $dbhost = "localhost";
 $dbname = "lunettes";
 
 //Utilisateur
-$dbuser = "";
-$dbpass = "";
+$dbuser = "Marie2";
+$dbpass = "Ninmarie0.";
 
 //Inscription / Compte
 
