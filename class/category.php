@@ -76,7 +76,7 @@ class Category{
             $this->id = $dbh->lastInsertId();
             return $this->id;
         }else{
-            return "Nom existe déjà";
+            return 0;
         }
 
     }
