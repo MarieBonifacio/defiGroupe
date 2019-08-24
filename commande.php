@@ -19,7 +19,7 @@ if(!isset($_SESSION['userLog'])){
                 } else{
                     $panier = array();
                 }
-                
+
                 if(!empty($panier)){
                     $panierNbItem = 0;
                     foreach ($panier as $item) {
@@ -77,12 +77,12 @@ if(!isset($_SESSION['userLog'])){
                             <input type="radio" name="paiement" value="radio2">
                             Carte Bancaire</label>
                         </div>
-                        <a class="bouton" href="#">Commander</a>
+                        <a class="bouton" href="./pdf.php">Commander</a>
                     </div>
                 </div>
         </form>
-            
 
-<?php 
+
+<?php
 require("./includes/footer.php");
 ?>
