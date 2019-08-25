@@ -5,7 +5,7 @@ var menu = document.querySelector(".menuburger");
 
 function active(){
     menu.classList.toggle("menuburgeractive");
-    
+
 }
 button.addEventListener("click", active);
 
@@ -24,11 +24,19 @@ function appear(){
         searchbar.classList.toggle("searchbaractive");
         opensearch.classList.toggle("opensearchdisappear");
     })
-    
-    
-    
+
+
+
 }
 opensearch.addEventListener("click", appear );
 
 
-
+var submenuTitle = document.querySelectorAll(".submenuTitle");
+submenuTitle.forEach(function(title){
+    title.addEventListener('mouseover',function(){
+        let rel = this.getAttribute('rel');
+        let submenu = document.querySelector(".submenuroll[rel='"+rel+"']");
+        console.log(submenu);
+        submenu.style.display = 'flex';
+    });
+});

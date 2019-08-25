@@ -1,0 +1,85 @@
+#admin{
+
+}
+
+#admin .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex : 0 0 100%;
+    border-bottom: 1px solid rgba(113, 113, 113, 0.35);
+}
+
+#admin .flex div, #admin .flex h3{
+    flex : 1 1 25%;
+    padding: 10px;
+}
+
+#admin h2{
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+#admin form{
+    margin-bottom: 30px;
+}
+
+#admin .delete{
+    color: rgb(203, 28, 28);
+}
+
+#admin .flex .category_action{
+    flex: 0 0 100px;
+}
+
+#admin .flex .category_action i{
+    cursor: pointer;
+}
+
+#popEditBack{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.70);
+    z-index: 9990;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popEdit{
+    background-color: var(--primary-white);
+    padding: 50px;
+    border: 2px solid var(--primary-orange);
+    box-shadow: 0px 0px 20px 10px #7a7a7a98;
+}
+
+#popEdit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#popEdit form>*{
+    margin-bottom: 10px;
+}
+
+#popEdit #buttonForm{
+    box-shadow: 0px 0px 7px 1px #000000;
+    background-color:var(--primary-orange);
+    border-radius:12px;
+    border:2px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family:Impact;
+    font-size:14px;
+    font-weight:bold;
+    padding:4px 14px;
+    margin-top: 20px;
+    text-decoration:none;
+}
