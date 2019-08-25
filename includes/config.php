@@ -9,6 +9,7 @@ $dbhost = "webserv-db";
 $dbname = "lunettes";
 
 //Utilisateur
+
 $dbuser = "dbuser";
 $dbpass = "dbpass";
 
