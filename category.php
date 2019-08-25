@@ -43,14 +43,17 @@ if(!empty($_GET['id'])){
             $produits = $cat->getProduits("");
             foreach ($produits as $produit) {
                 echo '
-                <a class="produit">
-                    <img src="./images/produits/'.$produit->getId().'.png" alt="'.$produit->getNom().'"/>
-                    <div>
-                        <span class="nom">'.$produit->getNom().'</span>
-                        <span class="prix">'.$produit->getPrix().'&euro;</span>
-                    </div>
-                    <button class="toBasket"><i class="material-icons">add_shopping_cart</i></button>
-                </a>
+
+                <div class="produit">
+                    <a href="./produit.php?id='.$produit->getId().'">
+                        <img src="./images/produits/'.$produit->getId().'.png" alt="'.$produit->getNom().'"/>
+                        <div>
+                            <span class="nom">'.$produit->getNom().'</span>
+                            <span class="prix">'.$produit->getPrix().'&euro;</span>
+                        </div>
+                    </a>
+                    <a href="./controller/panier.php?produit='.$produit->getId().'" class="toBasket"><i class="material-icons">add_shopping_cart</i></a>
+                </div>
                 ';
             }
             ?>

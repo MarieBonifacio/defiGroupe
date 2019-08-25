@@ -104,6 +104,11 @@
     flex-wrap: wrap;
 }
 
+#category .produits a{
+    color: black;
+    text-decoration: none;
+}
+
 #category .produits .produit{
     border: 1px dotted var(--primary-orange);
     display: flex;
@@ -139,6 +144,12 @@
     font-weight: bold;
     font-size: 18px;
     font-family: var(--fontText);
+}
+
+#category .produits .produit .prix{
+    font-weight: bold;
+    font-family: var(--fontText);
+    color: var(--primary-orange);
 }
 
 #category .toBasket{
