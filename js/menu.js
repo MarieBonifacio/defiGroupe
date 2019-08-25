@@ -13,9 +13,6 @@ button.addEventListener("click", active);
 var opensearch = document.querySelector(".opensearch");
 var searchbar = document.querySelector(".searchbar");
 
-
-
-
 function appear(){
     searchbar.classList.toggle("searchbaractive"); //Fais apparaître la barre de recherche
     opensearch.classList.toggle("opensearchdisappear"); //Fais disparaitre la loupe de recherche après que la barre soit apparu
@@ -31,12 +28,20 @@ function appear(){
 opensearch.addEventListener("click", appear );
 
 
-var submenuTitle = document.querySelectorAll(".submenuTitle");
-submenuTitle.forEach(function(title){
-    title.addEventListener('mouseover',function(){
-        let rel = this.getAttribute('rel');
-        let submenu = document.querySelector(".submenuroll[rel='"+rel+"']");
-        console.log(submenu);
-        submenu.style.display = 'flex';
+if (window.matchMedia("(min-width: 800px)").matches) {
+    var submenuTitle = document.querySelectorAll(".submenuTitle");
+    submenuTitle.forEach(function(title){
+        title.addEventListener('mouseover',function(){
+            let rel = this.getAttribute('rel');
+            let submenu = document.querySelector(".submenuroll[rel='"+rel+"']");
+            console.log(submenu);
+            submenu.style.display = 'flex';
+        });
+        title.addEventListener('mouseout',function(){
+            let rel = this.getAttribute('rel');
+            let submenu = document.querySelector(".submenuroll[rel='"+rel+"']");
+            console.log(submenu);
+            submenu.style.display = 'none';
+        })
     });
-});
+}
