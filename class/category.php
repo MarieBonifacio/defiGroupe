@@ -76,7 +76,7 @@ class Category{
             $this->id = $dbh->lastInsertId();
             return $this->id;
         }else{
-            return "Nom existe déjà";
+            return 0;
         }
 
     }
@@ -112,6 +112,21 @@ class Category{
         $select->bindParam(':nom', $this->nom);
         $select->execute();
         return ($select->rowCount() == 0)?0:1;
+    }
+
+    public function getProduits($filter){
+        require(dirname(__DIR__).'/includes/dbconnect.php');
+        $sql = "SELECT * FROM produits WHERE category_id=:id";
+        $select = $dbh->prepare($sql);
+        $select->bindParam(':id', $this->id);
+        $select->execute();
+        $produits = [];
+        while($row = $select->fetch()){
+            $p = new Produit();
+            $p->getProduitById($row['id']);
+            $produits[] = $p;
+        }
+        return $produits;
     }
 }
 

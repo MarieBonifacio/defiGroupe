@@ -1,13 +1,18 @@
 <?php
-$panierCookies = array(
-    array("nom" => "Item 1", "quantite" => 1, "prix" => 10.50 ),
-    array("nom" => "Item 2", "quantite" => 2, "prix" => 11.50 ),
-    array("nom" => "Item 3", "quantite" => 3, "prix" => 12.50 ),
-);
-setcookie("panier", serialize($panierCookies), time()+2*24*60*60);
+// $panierCookies = array(
+//     array("id" => "1", "quantite" => 1),
+//     array("id" => "2", "quantite" => 2),
+//     array("id" => "3", "quantite" => 3),
+// );
+// setcookie("panier", serialize($panierCookies), time()+2*24*60*60);
+// $_SESSION['panier']=$panierCookies;
 
-if(isset($_COOKIE["panier"])){
-    $panier = unserialize($_COOKIE["panier"]);
+require('./class/category.php');
+require('./class/produit.php');
+
+
+if(isset($_SESSION["panier"])){
+    $panier = $_SESSION["panier"];
 } else{
     $panier = array();
 }
@@ -33,8 +38,10 @@ echo '
         $panierTotal = 0;
         if(!empty($panier)){
             foreach ($panier as $item) {
-                echo '<li><span>'.$item['nom'].'</span><span>x'.$item['quantite'].'</span><span>'.$item['prix'].'&euro;</span></li>';
-                $panierTotal += $item['quantite']*$item['prix'];
+                $produit = new Produit();
+                $produit->getProduitById($item['id']);
+                echo '<li><span>'.$produit->getNom().'</span><span>x'.$item['quantite'].'</span><span>'.$produit->getPrix().'&euro;</span></li>';
+                $panierTotal += $item['quantite']*$produit->getPrix();
             }
         }
     echo '

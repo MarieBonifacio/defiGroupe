@@ -1,0 +1,36 @@
+.profil{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+
+.profil #infos{
+    margin: 40px;
+    padding: 40px 0px;
+    width: 80%;
+    border: 2px solid var(--primary-orange);
+    font-family: Roboto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 20px 10px #7a7a7a98;
+
+}
+
+.profil .table, .entete, thead{
+    border: solid 2px black;
+    text-align: center;
+}
+
+h1{
+    font-family: Raleway; 
+}
+
+.profil #formProfil{
+    width: 95%;
+}

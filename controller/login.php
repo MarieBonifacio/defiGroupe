@@ -10,7 +10,7 @@ if(!empty($_POST['mail']) AND !empty($_POST['password'])){
     $pwd = $_POST['password'];
     //on se connecte à la base de données
     require('../includes/dbconnect.php');
-    //dans une variable $sql, on séléctionne tout de la table user dans la colonne login 
+    //dans une variable $sql, on séléctionne tout de la table user dans la colonne email
     $sql = "SELECT * FROM users WHERE email=:email";
     // dans une variable select on prépare la requête sql en utilisant la variable de connexion $dbhh
     $select = $dbh->prepare($sql);
@@ -24,16 +24,28 @@ if(!empty($_POST['mail']) AND !empty($_POST['password'])){
 
         //si le mot de passe rentré correspond au hash du mdp stocké
         if(password_verify($pwd, $result['password'])){
-            $_SESSION["users"]=[
+            $_SESSION["userLog"]=[
                 "id"=> $result["id"],
-                "email"=> $result["email"]
+                "email"=> $result["email"],
+                "nom"=> $result["nom"],
+                "prenom"=> $result["prenom"],
+                "email"=> $result["email"],
+                "adresse"=> $result["adresse"],
+                "cp"=> $result["cp"],
+                "ville"=> $result["ville"],
+                "tel"=> $result["telephone"],
+                "birthday"=> $result["birthday"],
+                "permission"=> $result["premission"]
+
             ];
             header("Location: ../profil.php");
         }else{
             header("Location:../login.php");
+            $_SESSION['error']="Mot de passe incorrect";
         }
     }else{
         header("Location:../login.php");
+        $_SESSION['error']="Compte inexistant";
     }
 }else{
     header("Location:../login.php");

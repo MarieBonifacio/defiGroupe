@@ -7,10 +7,10 @@
     --primary-white: rgba(255,255,255,1);
 
     /* fonts de google-fonts*/
-    --Roboto:  'Roboto', sans-serif;
-    --Raleway: 'Raleway', sans-serif;
+    --fontText:  'Roboto', sans-serif;
+    --fontTitle: 'Raleway', sans-serif;
 
     --size-font: 1rem;
-    
+
 
 }
