@@ -20,7 +20,7 @@
                                 $select = $dbh->query($sql);
                                 echo '<ul class="submenuroll" rel="cat">';
                                     while($row = $select->fetch()){
-                                        echo '<li><a class="submenu" href="./category.php?id='.$row["id"].'.php">'.$row["nom"].'</a></li>';
+                                        echo '<li><a class="submenu" href="./category.php?id='.$row["id"].'">'.$row["nom"].'</a></li>';
                                     }
                                 echo '</ul></li>';
                             }elseif($value == "compte"){
