@@ -4,38 +4,39 @@ if(!empty($_GET['id'])){
     $css = ["produit"];
     require("./includes/header.php");
 
-    require('./class/produit.php');
-    require('./class/category.php');
-
     $produit = new Produit();
     $produit->getProduitById($_GET['id']);
     ?>
     <div id="produit">
     <div class="name">
             <?php
-            echo $produit->getNom();
+            echo '<h1>'.$produit->getNom().'</h1>';
             ?>
         </div>
-        <div class="Img"><img src="./images/lunette-clasique-je-dis-rien.jpg" alt="img"></div><!--$produit->getImage(); -->
+        <?php
+            echo '<div class="Img"><img src="./images/produits/'.$produit->getId().'.png" alt="img"></div>';
+        ?>
         <div class="flex">
             <div class="stock">
                 <?php
                 if ($produit->getStock() < 10) {
-                    echo '<span class="color-red">en stock ' .$produit->getStock().'</span>'; 
+                    echo '<span class="color-red">en stock ' .$produit->getStock().'</span>';
                 }else {
-                    echo '<span class="color-green">en stock ' .$produit->getStock().'</span>'; 
+                    echo '<span class="color-green">en stock ' .$produit->getStock().'</span>';
                 }
-                
+
                 ?>
             </div>
-            <div class="Price"> 
+            <div class="Price">
                 <?php
                     echo '<span class="prix">prix '.$produit->getPrix().' €</span>';
                 ?>
             </div>
         </div>
         <div class="flex">
-            <button class="ajouPanier"type="submit"formmethod="get|post"><i class="material-icons">add_shopping_cart</i>Ajouter panier</button>
+            <?php
+            echo '<a href="./controller/panier.php?produit='.$produit->getId().'" class="ajouPanier"type="submit"formmethod="get|post"><i class="material-icons">add_shopping_cart</i>Ajouter panier</a>';
+            ?>
         </div>
     <div class="description">
         <?php
@@ -45,7 +46,7 @@ if(!empty($_GET['id'])){
 </div>
 <?php
     require("./includes/footer.php");
-    
+
 }else{
     header('Location:./index.php');
 }
