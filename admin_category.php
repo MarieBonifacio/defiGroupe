@@ -71,6 +71,6 @@ require('./includes/header.php');
     </form>
 </div>
 <?php
-$js = ['admin'];
+$js = ['admin','admin_category'];
 require('./includes/footer.php');
 ?>

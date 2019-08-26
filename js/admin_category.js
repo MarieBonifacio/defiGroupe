@@ -1,5 +1,5 @@
-var editsCat = document.querySelectorAll(".editCat");
-var deletesCat = document.querySelectorAll(".deleteCat");
+var editsCats = document.querySelectorAll(".editCat");
+var deletesCats = document.querySelectorAll(".deleteCat");
 
 editsCats.forEach(function(edit){
     edit.addEventListener('click', function(){
