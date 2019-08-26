@@ -35,7 +35,7 @@ if(!empty($_POST['mail']) AND !empty($_POST['password'])){
                 "ville"=> $result["ville"],
                 "tel"=> $result["telephone"],
                 "birthday"=> $result["birthday"],
-                "permission"=> $result["premission"]
+                "permission"=> $result["permission"]
 
             ];
             header("Location: ../profil.php");

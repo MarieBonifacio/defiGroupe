@@ -38,6 +38,10 @@
                                 echo '<li><a href="'.$value.'.php">'.$value.'</a></li>';
                             }
                         }
+
+                        if(!empty($_SESSION['userLog']) && $_SESSION['userLog']['permission'] == 1){
+                            echo '<li><a href="admin_category.php">Administration</a></li>';
+                        }
                         ?>
                         <button class="opensearch"><i class="material-icons">search</i></button>
 
