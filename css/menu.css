@@ -144,6 +144,12 @@
 
     #menu .submenuroll{
         background-color: white;
+        margin-top: 25px;
+        margin-left:0vh;
+    }
+    #menu .submenuroll li{
+        margin: 0;
+        background-color: white;
     }
     #menu li {
         margin-left:4vh;
