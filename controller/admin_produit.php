@@ -1,50 +1,43 @@
 <?php
 require('../class/category.php');
+require('../class/produit.php');
 
 if(isset($_POST['action'])){
     switch($_POST['action']){
         case 'Ajouter':
-            if(!empty($_POST['nom'])){
+            if(!empty($_POST['nom']) && !empty($_POST['description']) && !empty($_POST['prix']) && !empty($_POST['stock']) && !empty($_POST['category'])){
                 $nom = htmlspecialchars($_POST['nom']);
+                $description = htmlspecialchars($_POST['description']);
+                $prix = htmlspecialchars($_POST['prix']);
+                $stock = htmlspecialchars($_POST['stock']);
+                $category_id = htmlspecialchars($_POST['category']);
                 $category = new Category();
-                $category->setNom($nom);
-                require('../includes/dbconnect.php');
-                $sql = "SELECT MAX(ordre) AS maxOrdre FROM categories";
-                $select = $dbh->query($sql);
-                $result = $select->fetch();
-                $newOrdre = $result['maxOrdre']+1;
-                $category->setOrdre($newOrdre);
-                if ($category->save() != 0){
-                    header('Location: ../admin_category.php');
+                $category->getCategoryById($category_id);
+
+                $produit = new Produit();
+                $produit->setNom($nom);
+                $produit->setDescription($description);
+                $produit->setPrix($prix);
+                $produit->setStock($stock);
+                $produit->setCategory($category);
+
+                if ($produit->save() != 0){
+                    header('Location: ../admin_produit.php');
                 }else{
                     echo 'ERROR';
                 }
             }
         break;
         case 'Editer':
-            if(!empty($_POST['id']) && !empty($_POST['nom']) && !empty($_POST['ordre'])){
-                $id = htmlspecialchars($_POST['id']);
-                $nom = htmlspecialchars($_POST['nom']);
-                $ordre = htmlspecialchars($_POST['ordre']);
 
-                $category = new Category();
-                $category->getCategoryById($id);
-                $category->setNom($nom);
-                $category->setOrdre($ordre);
-                if ($category->update() != 0){
-                    header('Location: ../admin_category.php');
-                }else{
-                    echo 'ERROR';
-                }
-            }
         break;
         case 'Supprimer':
             if(!empty($_POST['id'])){
                 $id = htmlspecialchars($_POST['id']);
-                $category = new Category();
-                $category->getCategoryById($id);
-                if ($category->delete() != 0){
-                    header('Location: ../admin_category.php');
+                $produit = new Produit();
+                $category->getProduitById($id);
+                if ($produit->delete() != 0){
+                    header('Location: ../admin_produit.php');
                 }else{
                     echo 'ERROR';
                 }
