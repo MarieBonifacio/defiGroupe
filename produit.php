@@ -10,7 +10,7 @@ if(!empty($_GET['id'])){
     <div id="produit">
     <div class="name">
             <?php
-            echo '<h1>'.$produit->getNom().'</h1>';
+            echo '<h2>'.$produit->getNom().'</h2>';
             ?>
         </div>
         <?php

@@ -9,7 +9,7 @@
 #produit .name {
   text-align: center;
   font-size: 30px;
-  color: red;
+  color: var(--primary-orange);
   padding-top: 20px;
   margin-bottom: 30px;
 }

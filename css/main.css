@@ -8,6 +8,14 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--fontTitle);
 }
 
+body, header, footer, #produit{
+    background-color: rgba(244, 244, 244, 0.88) !important;
+}
+
+.produit{
+    background-color:white !important;
+}
+
 #mainTitle{
     width: 100%;
     text-align: center;
@@ -62,6 +70,7 @@ h1, h2, h3, h4, h5, h6{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .last3 .produit .nom{
