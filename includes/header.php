@@ -1,5 +1,10 @@
 <?php
 session_start();
+$timestamp = time() + 365*24*3600; //durée de vie 1 an
+$tab = array(1,2,3);
+// serialize transforme un tableau en chaine de caractères
+$tabS = serialize($tab);
+setcookie("derniers_articles", $tabS, $timestamp, null, null, false, true);
 ?>
 
 
