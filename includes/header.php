@@ -15,19 +15,20 @@ setcookie("derniers_articles", $tabS, $timestamp, null, null, false, true);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="./css/variable.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/panier.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <?php 
+    <?php
     if (!empty($css)) {
         foreach ($css as $value) {
             echo  '<link rel="stylesheet" href="./css/'. $value .'.css">';
         }
     }
     ?>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <!--link google fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
     <!-- material icons -->

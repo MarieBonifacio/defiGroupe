@@ -22,7 +22,6 @@
         if(numSlide >= slidePromoImgs.length){
             numSlide = 0;
         }
-        console.log(numSlide);
         document.querySelector('#SlidePromo').setAttribute('rel', numSlide);
         setTimeout("ChangeImage()", 5000);
     };

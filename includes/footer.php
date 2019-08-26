@@ -48,6 +48,7 @@
 </body>
 <script src="./js/panier.js" charset="utf-8"></script>
 <script src="./js/menu.js" charset="utf-8"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <?php
 if(!empty($js)){
