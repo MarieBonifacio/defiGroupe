@@ -1,11 +1,11 @@
 <?php
-$panierCookies = array(
-    array("id" => "1", "quantite" => 1),
-    array("id" => "2", "quantite" => 2),
-    array("id" => "3", "quantite" => 3),
-);
-setcookie("panier", serialize($panierCookies), time()+2*24*60*60);
-$_SESSION['panier']=$panierCookies;
+// $panierCookies = array(
+//     array("id" => "1", "quantite" => 1),
+//     array("id" => "2", "quantite" => 2),
+//     array("id" => "3", "quantite" => 3),
+// );
+// setcookie("panier", serialize($panierCookies), time()+2*24*60*60);
+// $_SESSION['panier']=$panierCookies;
 
 require('./class/category.php');
 require('./class/produit.php');

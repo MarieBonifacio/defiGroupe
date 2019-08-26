@@ -15,7 +15,7 @@ $derniersArticles = unserialize( $_COOKIE["derniers_articles"]);
 if(isset($derniersArticles) AND sizeof($derniersArticles)>=1){
     print_r($derniersArticles);
 //Pour chaque élément du taleau avec pour valeur la variable $id
-    foreach($derniersArticles AS $id){ 
+    foreach($derniersArticles AS $id){
 //connexion base de données
         include("dbconnect.php");
 //déclaration de requête sql, je séléctionne tout dans la table articles dans la colonne id
@@ -35,16 +35,3 @@ if(isset($derniersArticles) AND sizeof($derniersArticles)>=1){
 
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
