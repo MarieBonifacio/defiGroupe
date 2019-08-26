@@ -66,3 +66,4 @@ setcookie("derniers_articles", $tabS, $timestamp, null, null, false, true);
     </header>
 
 <div id="contenair">
+    <h1 id="mainTitle">RaieBan</h1>
