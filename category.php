@@ -1,6 +1,6 @@
 <?php
 $css = array('category');
-$title = 'Categorie';
+$title = 'Categorie ';
 require('./includes/header.php');
 
 require_once('./class/category.php');
