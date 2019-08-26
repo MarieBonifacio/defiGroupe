@@ -12,7 +12,6 @@
         font-size: 7vh;
     }
 
-
     #menu a:hover, #menu .submenuTitle:hover{
         color:rgb(112, 112, 112);
         text-decoration: underline;
@@ -141,15 +140,11 @@
 
 @media screen and (min-width:800px){
 
-    *{
-        margin:0;
-        padding:0;
-    }
 
-    header{
-        height: 7vh;
-    }
 
+    #menu .submenuroll{
+        background-color: white;
+    }
     #menu li {
         margin-left:4vh;
     }

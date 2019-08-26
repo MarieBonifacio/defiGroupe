@@ -27,7 +27,7 @@
                         $sql= "SELECT * FROM categories ORDER BY ordre";
                         $select= $dbh->query($sql);
                         while($row=$select->fetch()){
-                            echo "<li id='menufooter'><a href='#'>".$row['nom']."</a></li>";
+                            echo "<li id='menufooter'><a href='./category.php?id=".$row['id']."'>".$row['nom']."</a></li>";
                         }
                     ?>
                 </ul>
